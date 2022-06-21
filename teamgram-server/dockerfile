@@ -7,7 +7,7 @@ RUN xz -d ffmpeg-release-amd64-static.tar.xz
 RUN tar xf ffmpeg-release-amd64-static.tar
 RUN cp /tmp/ffmpeg-5.0.1-amd64-static/ff* /usr/local/bin/
 WORKDIR /usr/src/
-RUN git clone https://github.com/teamgram/teamgram-server.git
+RUN git clone https://github.com/Andruxa/teamgram-server.git
 WORKDIR /usr/src/teamgram-server
 # Компиляция teamgram-server
 WORKDIR /usr/src/teamgram-server/scripts
