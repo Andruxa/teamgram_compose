@@ -40,8 +40,8 @@ services:
     # To learn about configuring Kafka for access across networks see
     # https://www.confluent.io/blog/kafka-client-cannot-connect-to-broker-on-aws-on-docker-etc/
     depends_on:
-      - zookeeper
-      condition: service_healthy
+      zookeeper:
+       condition: service_healthy
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: 'localhost:2181'
