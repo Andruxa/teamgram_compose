@@ -2,7 +2,7 @@ FROM mysql:5.7
 RUN apt-get update && apt-get install git -y --no-install-recommends && rm -rf /var/lib/apt/lists/*
 RUN git config --global http.sslverify "false"
 WORKDIR /tmp
-RUN git clone https://github.com/teamgram/teamgram-server.git
+RUN git clone https://github.com/Andruxa/teamgram-server.git
 WORKDIR /tmp/teamgram-server/teamgramd/sql
 RUN mv teamgram2.sql /docker-entrypoint-initdb.d/master.sql
 RUN mv *.sql /docker-entrypoint-initdb.d
